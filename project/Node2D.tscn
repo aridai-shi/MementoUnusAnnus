@@ -10,6 +10,21 @@ size = 51
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 56
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
 [sub_resource type="StyleBoxEmpty" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=9]
@@ -17,26 +32,11 @@ font_data = ExtResource( 3 )
 [sub_resource type="StyleBoxEmpty" id=10]
 
 [sub_resource type="DynamicFont" id=11]
-size = 56
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
-
-[sub_resource type="StyleBoxEmpty" id=2]
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="DynamicFont" id=7]
 size = 35
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="Shader" id=15]
+[sub_resource type="Shader" id=12]
 code = "shader_type canvas_item;
 void fragment(){
 	vec4 newcol = texture(SCREEN_TEXTURE,SCREEN_UV);
@@ -48,14 +48,14 @@ void fragment(){
 	}
 }"
 
-[sub_resource type="ShaderMaterial" id=16]
-shader = SubResource( 15 )
+[sub_resource type="ShaderMaterial" id=13]
+shader = SubResource( 12 )
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id=14]
 
-[sub_resource type="StyleBoxEmpty" id=13]
+[sub_resource type="StyleBoxEmpty" id=15]
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=16]
 size = 55
 outline_size = 5
 outline_color = Color( 0.188235, 0.188235, 0.188235, 1 )
@@ -115,10 +115,10 @@ valign = 2
 margin_left = 163.0
 margin_right = 1019.0
 margin_bottom = 57.0
-custom_styles/read_only = SubResource( 8 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_selected = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_colors/font_color = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_colors/font_color_uneditable = Color( 0.188235, 0.188235, 0.188235, 1 )
@@ -143,12 +143,12 @@ valign = 2
 margin_left = 496.0
 margin_right = 1019.0
 margin_bottom = 52.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color_disabled = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_colors/font_color = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_colors/font_color_hover = Color( 0.188235, 0.188235, 0.188235, 1 )
@@ -188,7 +188,7 @@ margin_bottom = 524.0
 rect_min_size = Vector2( 505, 300 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/HSplitContainer4"]
-material = SubResource( 16 )
+material = SubResource( 13 )
 margin_left = 257.0
 margin_right = 762.0
 margin_bottom = 300.0
@@ -198,9 +198,9 @@ texture = ExtResource( 4 )
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HSplitContainer4/NinePatchRect"]
 margin_right = 510.0
 margin_bottom = 300.0
-custom_styles/normal = SubResource( 12 )
-custom_styles/completion = SubResource( 13 )
-custom_fonts/font = SubResource( 14 )
+custom_styles/normal = SubResource( 14 )
+custom_styles/completion = SubResource( 15 )
+custom_fonts/font = SubResource( 16 )
 text = "I accepted the Truth."
 wrap_enabled = true
 __meta__ = {
