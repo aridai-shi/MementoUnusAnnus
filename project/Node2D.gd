@@ -70,7 +70,7 @@ func Proceed():
 		instance.username = $VBoxContainer/HSplitContainer2/LineEdit.text
 	var epOpt = $VBoxContainer/HSplitContainer/OptionButton
 	if str(epOpt.items[epOpt.selected])!="[Object:null]":
-		instance.episode = str(epOpt.items[epOpt.selected])
+		instance.episode = str(epOpt.get_item_text(epOpt.selected))
 	instance.dark = dark
 	if MemoirEdit.text != "":
 		instance.memoir = MemoirEdit.text
