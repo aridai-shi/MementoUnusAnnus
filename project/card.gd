@@ -26,9 +26,6 @@ func _ready():
 	$Details.text = "NAME: " + username + "\nFAV. VIDEO: " + episode
 # Called when the node enters the scene tree for the first time.
 func takeScreenshot():
-	var dir = Directory.new()
-	dir.open("user://")
-	dir.make_dir("Memoirs")
 	var old_clear_mode = get_viewport().get_clear_mode()
 	get_viewport().set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
 	# Let two frames pass to make sure the screen was captured.
@@ -40,9 +37,8 @@ func takeScreenshot():
 	# restore the previous value, as some part wont redraw after...
 	img.flip_y()
 	get_viewport().set_clear_mode(old_clear_mode)
-#	img.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DOWNLOADS)+"/"+username+"Memoir.png")
-	img.save_png("user://Memoirs/"+username+"Memoir.png")
-	OS.shell_open("user://Memoirs/")
+	img.save_png(OS.get_user_data_dir()+"/"+username+"Memoir.png")
+	OS.shell_open(OS.get_user_data_dir()+"/"+username+"Memoir.png")
 	emit_signal("finishedShot")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
