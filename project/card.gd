@@ -41,8 +41,8 @@ func takeScreenshot():
 	img.flip_y()
 	get_viewport().set_clear_mode(old_clear_mode)
 #	img.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DOWNLOADS)+"/"+username+"Memoir.png")
-	img.save_png(OS.get_user_data_dir()+"/Memoirs/"+username+"Memoir.png")
-	OS.shell_open(OS.get_user_data_dir()+"/Memoirs")
+	img.save_png("user://Memoirs/"+username+"Memoir.png")
+	OS.shell_open("user://Memoirs/")
 	emit_signal("finishedShot")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
