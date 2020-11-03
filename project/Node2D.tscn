@@ -146,7 +146,7 @@ __meta__ = {
 position = Vector2( 512, 300 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
-frame = 4
+frame = 12
 playing = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
