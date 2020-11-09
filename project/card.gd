@@ -39,6 +39,9 @@ func takeScreenshot():
 	# restore the previous value, as some part wont redraw after...
 	img.flip_y()
 	get_viewport().set_clear_mode(old_clear_mode)
-	img.save_png(OS.get_executable_path()+"/Memoirs/"+username+"Memoir.png")
-	OS.shell_open(OS.get_executable_path()+"/Memoirs/"+username+"Memoir.png")
+	var dir = Directory.new()
+	if !dir.dir_exists(OS.get_executable_path().get_base_dir()+"/Memoirs/"):
+		dir.make_dir(OS.get_executable_path().get_base_dir()+"/Memoirs/")
+	img.save_png(OS.get_executable_path().get_base_dir()+"/Memoirs/"+username+"Memoir.png")
+	OS.shell_open(OS.get_executable_path().get_base_dir()+"/Memoirs/"+username+"Memoir.png")
 	emit_signal("finishedShot")

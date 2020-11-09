@@ -78,6 +78,7 @@ func Proceed():
 	if MemoirEdit.text != "":
 		instance.memoir = MemoirEdit.text
 	add_child(instance)
+	visible = false
 	instance.takeScreenshot()
 	yield(instance,"finishedShot")
 	instance.queue_free()
