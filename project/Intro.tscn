@@ -19,7 +19,7 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="TextureRect" parent="." instance=ExtResource( 3 )]
-frame = 1
+frame = 21
 
 [node name="Label" type="RichTextLabel" parent="."]
 margin_right = 1024.0
@@ -28,18 +28,6 @@ custom_fonts/italics_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 bbcode_enabled = true
-bbcode_text = "IF YOU FIND THE LIST OF EPISODES IS OUTDATED, DOWNLOAD THE LATEST ShorterUA.txt FROM
-github.com/aridai-shi/MementoUnusAnnus/
-OR UPDATE  IT MANUALLY
-
-MEMENTO MORI.
-PRESS SPACE TO CONTINUE"
-text = "IF YOU FIND THE LIST OF EPISODES IS OUTDATED, DOWNLOAD THE LATEST ShorterUA.txt FROM
-github.com/aridai-shi/MementoUnusAnnus/
-OR UPDATE  IT MANUALLY
-
-MEMENTO MORI.
-PRESS SPACE TO CONTINUE"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
