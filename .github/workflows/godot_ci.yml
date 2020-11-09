@@ -4,25 +4,30 @@ on:
     branches:
       - main
   workflow_dispatch:
+
 jobs:
-  Godot:
+  # job id, can be anything
+  export_game:
+    # Always use ubuntu-latest for this action
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        platform: [linux, windows, mac]
+    # Job name, can be anything
+    name: Export Game Job
     steps:
-      - uses: actions/checkout@v2
-        with:
-          lfs: true
-      - name: Build
-        id: build
-        uses: josephbmanley/build-godot-action@v1.4.0
-        with:
-          name: example
-          preset: ${{ matrix.platform }}
-          debugMode: "true"
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: Client - ${{ matrix.platform }}
-          path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
+      # Always include the checkout step so that 
+      # your project is available for Godot to export
+    - name: checkout
+      uses: actions/checkout@v2.3.1
+      # Ensure that you get the entire project history
+      with:
+        fetch-depth: 0
+    - name: export game
+      # Use latest version (see releases for all versions)
+      uses: firebelley/godot-export@v2.6.0
+      with:
+        # Defining all the required inputs
+        # I used the mono version of Godot in this example
+        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/3.1.2/Godot_v3.1.2-stable_linux_headless.64.zip
+        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/3.1.2/Godot_v3.1.2-stable_export_templates.tpz
+        relative_project_path: ./project/
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
