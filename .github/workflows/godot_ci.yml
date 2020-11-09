@@ -10,7 +10,7 @@ jobs:
     # Always use ubuntu-latest for this action
     runs-on: ubuntu-latest
     # Job name, can be anything
-    name: Export Game Job
+    name: Export
     steps:
       # Always include the checkout step so that 
       # your project is available for Godot to export
