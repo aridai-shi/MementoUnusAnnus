@@ -19,7 +19,7 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="TextureRect" parent="." instance=ExtResource( 3 )]
-frame = 39
+frame = 0
 
 [node name="Label" type="RichTextLabel" parent="."]
 margin_right = 1024.0
