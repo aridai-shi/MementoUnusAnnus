@@ -15,10 +15,13 @@ var card = preload("res://card.tscn")
 func _ready():
 	load_ua_vids()
 	MemoirEdit = $VBoxContainer/HSplitContainer4/NinePatchRect/TextEdit
-
+	
 func load_ua_vids():
 	var f = File.new()
-	f.open("res://ShorterUA.txt", File.READ)
+	if f.file_exists(OS.get_executable_path()+"/ShorterUA.txt"):
+		f.open(OS.get_executable_path()+"/ShorterUA.txt", File.READ)
+	else:
+		f.open("res://ShorterUA.txt",File.READ)
 	var index = 1
 	while not f.eof_reached(): # iterate through all lines until the end of file is reached
 		var line = f.get_line()
@@ -78,3 +81,4 @@ func Proceed():
 	instance.takeScreenshot()
 	yield(instance,"finishedShot")
 	instance.queue_free()
+

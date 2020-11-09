@@ -87,3 +87,5 @@ __meta__ = {
 }
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+max_redirects = 18
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_request_done"]

@@ -8,6 +8,7 @@ var username = "THE VIEWER"
 var episode = "ACCEPTING THE TRUTH"
 var memoir = "I accepted the Truth"
 var dark = false
+signal imgurAuthed
 signal finishedShot
 func _ready():
 	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
@@ -38,31 +39,6 @@ func takeScreenshot():
 	# restore the previous value, as some part wont redraw after...
 	img.flip_y()
 	get_viewport().set_clear_mode(old_clear_mode)
-	img.save_png(OS.get_user_data_dir()+"/"+username+"Memoir.png")
-	var newImage = img.save_png_to_buffer()
-	
-	var urlString = "/v0/b/unus-annus-memoir-database.appspot.com/o?uploadType=media&name="+username.replace(" ","")+"Memoir"
-	print (urlString)
-	_make_image_request(urlString,newImage)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-func _make_image_request(url, data_to_send):
-	# Add 'Content-Type' header:
-	var headers = ["Content-Type: image/png"]
-	var reqClient = HTTPClient.new()
-	reqClient.connect_to_host("www.firebasestorage.googleapis.com",-1,true)
-	while(reqClient.get_status() == HTTPClient.STATUS_CONNECTING or reqClient.get_status() == HTTPClient.STATUS_RESOLVING):
-		reqClient.poll()
-		print("Connecting...")
-		OS.delay_msec(300)
-	if reqClient.get_status()==HTTPClient.STATUS_SSL_HANDSHAKE_ERROR:
-		print("Handshake error. Bonk aridai over it. Restarting")
-		_make_image_request(url,data_to_send)
-		return
-	var result = reqClient.request_raw(HTTPClient.METHOD_POST,url,headers,data_to_send)
-	if result!=0:
-		print("Error Code: " + str(result) + " Restarting...")
-		_make_image_request(url,data_to_send)
+	img.save_png(OS.get_executable_path()+"/Memoirs/"+username+"Memoir.png")
+	OS.shell_open(OS.get_executable_path()+"/Memoirs/"+username+"Memoir.png")
 	emit_signal("finishedShot")

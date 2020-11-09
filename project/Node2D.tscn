@@ -1,85 +1,27 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Node2D.gd" type="Script" id=1]
-[ext_resource path="res://spiral_bg/spiral21.png" type="Texture" id=2]
+[ext_resource path="res://spiralrect.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BAHNSCHRIFT 11.TTF" type="DynamicFontData" id=3]
 [ext_resource path="res://input.png" type="Texture" id=4]
-[ext_resource path="res://spiral_bg/spiral03.png" type="Texture" id=5]
-[ext_resource path="res://spiral_bg/spiral05.png" type="Texture" id=6]
-[ext_resource path="res://spiral_bg/spiral07.png" type="Texture" id=7]
-[ext_resource path="res://spiral_bg/spiral02.png" type="Texture" id=8]
-[ext_resource path="res://spiral_bg/spiral01.png" type="Texture" id=9]
-[ext_resource path="res://spiral_bg/spiral06.png" type="Texture" id=10]
-[ext_resource path="res://spiral_bg/spiral00.png" type="Texture" id=11]
-[ext_resource path="res://spiral_bg/spiral08.png" type="Texture" id=12]
-[ext_resource path="res://spiral_bg/spiral09.png" type="Texture" id=13]
-[ext_resource path="res://spiral_bg/spiral10.png" type="Texture" id=14]
-[ext_resource path="res://spiral_bg/spiral11.png" type="Texture" id=15]
-[ext_resource path="res://spiral_bg/spiral12.png" type="Texture" id=16]
-[ext_resource path="res://spiral_bg/spiral13.png" type="Texture" id=17]
-[ext_resource path="res://spiral_bg/spiral04.png" type="Texture" id=18]
-[ext_resource path="res://spiral_bg/spiral14.png" type="Texture" id=19]
-[ext_resource path="res://spiral_bg/spiral16.png" type="Texture" id=20]
-[ext_resource path="res://spiral_bg/spiral17.png" type="Texture" id=21]
-[ext_resource path="res://spiral_bg/spiral19.png" type="Texture" id=22]
-[ext_resource path="res://spiral_bg/spiral20.png" type="Texture" id=23]
-[ext_resource path="res://spiral_bg/spiral18.png" type="Texture" id=24]
-[ext_resource path="res://spiral_bg/spiral15.png" type="Texture" id=25]
-[ext_resource path="res://spiral_bg/spiral24.png" type="Texture" id=26]
-[ext_resource path="res://spiral_bg/spiral29.png" type="Texture" id=27]
-[ext_resource path="res://spiral_bg/spiral32.png" type="Texture" id=28]
-[ext_resource path="res://spiral_bg/spiral33.png" type="Texture" id=29]
-[ext_resource path="res://spiral_bg/spiral47.png" type="Texture" id=30]
-[ext_resource path="res://spiral_bg/spiral43.png" type="Texture" id=31]
-[ext_resource path="res://spiral_bg/spiral25.png" type="Texture" id=32]
-[ext_resource path="res://spiral_bg/spiral26.png" type="Texture" id=33]
-[ext_resource path="res://spiral_bg/spiral28.png" type="Texture" id=34]
-[ext_resource path="res://spiral_bg/spiral27.png" type="Texture" id=35]
-[ext_resource path="res://spiral_bg/spiral31.png" type="Texture" id=36]
-[ext_resource path="res://spiral_bg/spiral35.png" type="Texture" id=37]
-[ext_resource path="res://spiral_bg/spiral38.png" type="Texture" id=38]
-[ext_resource path="res://spiral_bg/spiral40.png" type="Texture" id=39]
-[ext_resource path="res://spiral_bg/spiral48.png" type="Texture" id=40]
-[ext_resource path="res://spiral_bg/spiral49.png" type="Texture" id=41]
-[ext_resource path="res://spiral_bg/spiral45.png" type="Texture" id=42]
-[ext_resource path="res://spiral_bg/spiral51.png" type="Texture" id=43]
-[ext_resource path="res://spiral_bg/spiral22.png" type="Texture" id=44]
-[ext_resource path="res://spiral_bg/spiral23.png" type="Texture" id=45]
-[ext_resource path="res://spiral_bg/spiral42.png" type="Texture" id=46]
-[ext_resource path="res://spiral_bg/spiral52.png" type="Texture" id=47]
-[ext_resource path="res://spiral_bg/spiral44.png" type="Texture" id=48]
-[ext_resource path="res://spiral_bg/spiral46.png" type="Texture" id=49]
-[ext_resource path="res://spiral_bg/spiral34.png" type="Texture" id=50]
-[ext_resource path="res://spiral_bg/spiral36.png" type="Texture" id=51]
-[ext_resource path="res://spiral_bg/spiral37.png" type="Texture" id=52]
-[ext_resource path="res://spiral_bg/spiral39.png" type="Texture" id=53]
-[ext_resource path="res://spiral_bg/spiral30.png" type="Texture" id=54]
-[ext_resource path="res://spiral_bg/spiral50.png" type="Texture" id=55]
-[ext_resource path="res://spiral_bg/spiral41.png" type="Texture" id=56]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 18 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 2 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 27 ), ExtResource( 54 ), ExtResource( 36 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 50 ), ExtResource( 37 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 38 ), ExtResource( 53 ), ExtResource( 39 ), ExtResource( 56 ), ExtResource( 46 ), ExtResource( 31 ), ExtResource( 48 ), ExtResource( 42 ), ExtResource( 49 ), ExtResource( 30 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 55 ), ExtResource( 43 ), ExtResource( 47 ) ],
-"loop": true,
-"name": "default",
-"speed": 40.0
-} ]
-
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 51
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 56
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
@@ -89,14 +31,12 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=10]
 
-[sub_resource type="StyleBoxEmpty" id=11]
-
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=11]
 size = 35
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="Shader" id=13]
+[sub_resource type="Shader" id=12]
 code = "shader_type canvas_item;
 void fragment(){
 	vec4 newcol = texture(SCREEN_TEXTURE,SCREEN_UV);
@@ -108,18 +48,20 @@ void fragment(){
 	}
 }"
 
-[sub_resource type="ShaderMaterial" id=14]
-shader = SubResource( 13 )
+[sub_resource type="ShaderMaterial" id=13]
+shader = SubResource( 12 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
 
 [sub_resource type="StyleBoxEmpty" id=15]
 
-[sub_resource type="StyleBoxEmpty" id=16]
-
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=16]
 size = 55
 outline_size = 5
 outline_color = Color( 0.188235, 0.188235, 0.188235, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=17]
 
 [sub_resource type="StyleBoxEmpty" id=18]
 
@@ -129,9 +71,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=21]
 
-[sub_resource type="StyleBoxEmpty" id=22]
-
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=22]
 size = 53
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
@@ -142,12 +82,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="AnimatedSprite" parent="."]
-position = Vector2( 512, 300 )
-scale = Vector2( 2, 2 )
-frames = SubResource( 1 )
-frame = 12
-playing = true
+[node name="TextureRect" parent="." instance=ExtResource( 2 )]
+frame = 39
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1019.0
@@ -165,7 +101,7 @@ margin_bottom = 57.0
 margin_top = 2.0
 margin_right = 151.0
 margin_bottom = 54.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 text = "NAME:"
 valign = 2
@@ -174,10 +110,10 @@ valign = 2
 margin_left = 163.0
 margin_right = 1019.0
 margin_bottom = 57.0
-custom_styles/read_only = SubResource( 3 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_selected = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_colors/font_color = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_colors/font_color_uneditable = Color( 0.188235, 0.188235, 0.188235, 1 )
@@ -193,7 +129,7 @@ margin_bottom = 130.0
 [node name="Label" type="Label" parent="VBoxContainer/HSplitContainer"]
 margin_right = 484.0
 margin_bottom = 52.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 text = "FAVOURITE EPISODE:"
 valign = 2
@@ -202,12 +138,12 @@ valign = 2
 margin_left = 496.0
 margin_right = 1019.0
 margin_bottom = 52.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/disabled = SubResource( 10 )
-custom_styles/normal = SubResource( 11 )
-custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color_disabled = Color( 0.529412, 0.529412, 0.529412, 1 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 custom_colors/font_color_hover = Color( 0.529412, 0.529412, 0.529412, 1 )
@@ -226,7 +162,7 @@ custom_constants/separation = -4
 [node name="Label2" type="Label" parent="VBoxContainer/HSplitContainer3"]
 margin_right = 1019.0
 margin_bottom = 52.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 text = "WHAT DID YOU DO DURING OUR ONE YEAR?"
 valign = 2
@@ -238,7 +174,7 @@ margin_bottom = 524.0
 rect_min_size = Vector2( 505, 300 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/HSplitContainer4"]
-material = SubResource( 14 )
+material = SubResource( 13 )
 margin_left = 257.0
 margin_right = 762.0
 margin_bottom = 300.0
@@ -248,9 +184,9 @@ texture = ExtResource( 4 )
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HSplitContainer4/NinePatchRect"]
 margin_right = 510.0
 margin_bottom = 300.0
-custom_styles/normal = SubResource( 15 )
-custom_styles/completion = SubResource( 16 )
-custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_styles/completion = SubResource( 15 )
+custom_fonts/font = SubResource( 16 )
 text = "I accepted the Truth."
 wrap_enabled = true
 __meta__ = {
@@ -274,12 +210,12 @@ margin_left = 140.0
 margin_right = 477.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 300, 50 )
-custom_styles/hover = SubResource( 18 )
-custom_styles/pressed = SubResource( 19 )
-custom_styles/focus = SubResource( 20 )
-custom_styles/disabled = SubResource( 21 )
-custom_styles/normal = SubResource( 22 )
-custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 17 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/focus = SubResource( 19 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color_disabled = Color( 0.529412, 0.529412, 0.529412, 1 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 custom_colors/font_color_hover = Color( 0.529412, 0.529412, 0.529412, 1 )
@@ -291,12 +227,12 @@ margin_left = 527.0
 margin_right = 827.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 300, 50 )
-custom_styles/hover = SubResource( 18 )
-custom_styles/pressed = SubResource( 19 )
-custom_styles/focus = SubResource( 20 )
-custom_styles/disabled = SubResource( 21 )
-custom_styles/normal = SubResource( 22 )
-custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 17 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/focus = SubResource( 19 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color_disabled = Color( 0.529412, 0.529412, 0.529412, 1 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 custom_colors/font_color_hover = Color( 0.529412, 0.529412, 0.529412, 1 )
