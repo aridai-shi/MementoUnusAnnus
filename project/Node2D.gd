@@ -77,9 +77,15 @@ func Proceed():
 	instance.dark = dark
 	if MemoirEdit.text != "":
 		instance.memoir = MemoirEdit.text
+
+	for node in get_children():
+		node.visible = false
+	instance.scale = Vector2(1.25,1.25)
+	instance.global_position = Vector2(-125,0)
 	add_child(instance)
-	visible = false
 	instance.takeScreenshot()
 	yield(instance,"finishedShot")
 	instance.queue_free()
+	for node in get_children():
+		node.visible = true
 

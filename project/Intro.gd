@@ -5,7 +5,6 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var introString = "IF YOU FIND THE LIST OF EPISODES IS OUTDATED, DOWNLOAD THE LATEST ShorterUA.txt \n[i] [url=https://raw.githubusercontent.com/aridai-shi/MementoUnusAnnus/main/project/ShorterUA.txt]BY CLICKING HERE AND RIGHT-CLICK/'Save As' IN THE GAME'S FOLDER[/url][/i] \n OR UPDATE  IT MANUALLY! \n ALSO SHARE THE MEMOIRS WITH #MementoUnusAnnus AND LINK TO THE GITHUB PAGE SO MORE PEOPLE CAN SEE THIS.\n \n"
