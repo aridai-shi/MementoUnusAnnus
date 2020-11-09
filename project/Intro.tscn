@@ -4,14 +4,14 @@
 [ext_resource path="res://Intro.gd" type="Script" id=2]
 [ext_resource path="res://spiralrect.tscn" type="PackedScene" id=3]
 
-[sub_resource type="DynamicFont" id=2]
-size = 48
+[sub_resource type="DynamicFont" id=1]
+size = 35
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 45
+[sub_resource type="DynamicFont" id=2]
+size = 35
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
@@ -19,15 +19,17 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="TextureRect" parent="." instance=ExtResource( 3 )]
-frame = 40
+frame = 28
 
 [node name="Label" type="RichTextLabel" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-custom_fonts/italics_font = SubResource( 2 )
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/italics_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 bbcode_enabled = true
+bbcode_text = "POGCHAMP MOMENT"
+text = "POGCHAMP MOMENT"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
