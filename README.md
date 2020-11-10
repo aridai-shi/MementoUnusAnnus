@@ -14,6 +14,7 @@ There are four things you must input to create a Memoir.
  4. **The theme** - A purely cosmetic change, but it can serve as an effective way to immortalize your alignment, either as an Unus or an Annus. Unus is simply white text on a black background and Annus is black text on a white background.
 
 After inputing these four pieces of information, press 'Confirm' and your card shall appear before you. The file is located in the Memoirs folder, which should be in the same directory as the tool itself.
+If you want to help out, please share the Memoirs with the #MementoUnusAnnus and a link to the tool. This might help Mark and Ethan see this during the final livestream!
 ## Issues and help
 I am aware of how wonky this tool can be, considering I could only test it on Windows 10. If there are any issues in the Mac and Linux builds (or if I screwed something up in Windows, too) feel free to open an Issue in the Github repo or message me directly on Discord (@aridai#3842). The only issue that is exempt from this is "The list isn't updated!", because it's usually a matter of "This episode was released minutes ago, and as such I didn't have the time to update it.". Besides, you can update it yourself [as discussed at the start](#Before-you-begin---Unus-Annus-Video-List).
 ## Final words
