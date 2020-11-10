@@ -18,8 +18,8 @@ func _ready():
 	
 func load_ua_vids():
 	var f = File.new()
-	if f.file_exists(OS.get_executable_path()+"/ShorterUA.txt"):
-		f.open(OS.get_executable_path()+"/ShorterUA.txt", File.READ)
+	if f.file_exists(OS.get_executable_path().get_base_dir()+"/ShorterUA.txt"):
+		f.open(OS.get_executable_path().get_base_dir()+"/ShorterUA.txt", File.READ)
 	else:
 		f.open("res://ShorterUA.txt",File.READ)
 	var index = 1
